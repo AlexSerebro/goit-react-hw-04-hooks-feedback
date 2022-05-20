@@ -14,7 +14,6 @@ export default function Feedback() {
       if (e === 'good') { setGood(prevGood => prevGood + 1) }
       if (e === 'bad') { setBad(prevBad => prevBad + 1) }
       if(e==='neutral'){setNeutral(prevNeutral=>prevNeutral+1)}
-      
     };
   
 
