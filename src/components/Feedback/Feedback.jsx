@@ -10,10 +10,24 @@ export default function Feedback() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-    const handleClick = e =>{
-      if (e === 'good') { setGood(prevGood => prevGood + 1) }
-      if (e === 'bad') { setBad(prevBad => prevBad + 1) }
-      if(e==='neutral'){setNeutral(prevNeutral=>prevNeutral+1)}
+  const handleClick = e => {
+    console.log(e);
+    switch (e) {
+      case 'good':
+        setGood(state => state + 1)
+        break;
+      case 'bad':
+        setBad(state => state + 1)
+        break;
+      case 'neutral':
+        setNeutral(state => state + 1)
+        break;
+      default: return;
+
+    }
+      // if (e === 'good') { setGood(prevGood => prevGood + 1) }
+      // if (e === 'bad') { setBad(prevBad => prevBad + 1) }
+      // if(e==='neutral'){setNeutral(prevNeutral=>prevNeutral+1)}
     };
   
 
